@@ -1,10 +1,19 @@
 from django.shortcuts import render, redirect
 import requests
-from .models import projects, skill, atchviements, certificate, hackthons
+from .models import projects, skill, atchviements, certificate, hackthons, resume, Roles
 # Create your views here.
+
+from datetime import date
 
 def home(request):
     return render(request,'Modified_files/sample.html')
+
+def resumes(request):
+    res = [ i.img for i in resume.objects.all() ]
+    try :
+        return render(request,'Modified_files/resume.html',{'resume':res[-1]})
+    except:
+        return render(request,'Modified_files/resume.html',{'resume':res})
 
 def blog(request):
     project = [["https://imgs.search.brave.com/DaF2J-lw_q55hmQePzAqxD4R1HTalI2o8xRKDtSofqY/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9oZHdh/bGxwYXBlcmltLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ny8wOC8yMi84Njkx/MC1hbmltZS1saWdo/dGhvdXNlLWZsb2F0/aW5nX2lzbGFuZC5q/cGc","title","date","para"]]
@@ -12,14 +21,12 @@ def blog(request):
 
 def about(request):
 
-    github_username  = "NagiPragalathan"   #specify your User name
+    github_username  = "NagiPragalathan"
 
     #api url to grab public user repositories
     api_url = f"https://api.github.com/users/{github_username}/repos"
 
-    #send get request
     response = requests.get(api_url)
-    #get the json data
     skills = skill.objects.all()
     # skill = {"Python":"60%","Html":"60%","Css":"30%","Sqlite":"20%","Mysql":"40%","C":"50%","MIT Tool":"40%","Blender basics":"30%","2D Devalopment":"30%","3D Devalopment":"40%","Flask":"50%","Pygame":"30%","Java":"30%","Unity":"40%","Figma":"50%","Canva":"60%","Filmora":"40%","JavaScript":"50%","Tkinter":"30%","Swing":"60%"}
     skill_list = {}
@@ -51,18 +58,31 @@ def about(request):
         store = [i.img,i.topic,i.date_place]
         certificates.append(store)
     hackathon = []
+    hack_count = 0
+    winings = 0
     for i in hackthons.objects.all():
         store = [i.img,i.topic,i.sub_topic,i.date_place,i.team,i.result]
+        print(i.result,hack_count)
+        hack_count = hack_count + 1
+        if i.result == 'win' or i.result == 'Win' or i.result == 'WIN' :
+            winings = winings + 1
         hackathon.append(store)
-    return render(request,'Modified_files/abt.html',{"repository":repository,"skill_r":skill_r,"skill_l":skill_l,"act" : atc,"certificate":certificates,"hackathon":hackathon})
+    hack_detials = [hack_count,winings]
+    roles_pos = Roles.objects.all()
+
+    return render(request,'Modified_files/abt.html',{"repository":repository,"skill_r":skill_r,"skill_l":skill_l,"act" : atc,"certificate":certificates,"hackathon":hackathon,"hack_detials":hack_detials,'roles_pos':roles_pos})
 
 def edit(request):
     full_data = projects.objects.all()
     skills = skill.objects.all()
     atc = atchviements.objects.all()
     cer = certificate.objects.all()
+    res = resume.objects.all()
     hackathon = hackthons.objects.all()
-    return render(request,'Modified_files/edit.html',{'data':full_data,'skill':skills,'atc':atc,'cer':cer,'hackathon':hackathon})
+    roles_pos = Roles.objects.all()
+    for i in  Roles.objects.all():
+        print(i.id)
+    return render(request,'Modified_files/edit.html',{'data':full_data,'skill':skills,'atc':atc,'cer':cer,'hackathon':hackathon,'res':res,'roles_pos':roles_pos})
 
 def del_skill(request):
     id = request.GET.get('id')
@@ -82,9 +102,24 @@ def delete_atc(request):
     delete_val.delete()
     return render(request,'Modified_files/edit.html')
 
+def delete_res(request):
+    id = request.GET.get('id')
+    delete_val = resume.objects.get(id=id)
+    print(delete_val)
+    delete_val.delete()
+    return render(request,'Modified_files/edit.html')
+
 def delete_cer(request):
     id = request.GET.get('id')
+    print(id)
     delete_val = certificate.objects.get(id=id)
+    delete_val.delete()
+    return render(request,'Modified_files/edit.html')
+
+def delete_role(request):
+    id = request.GET.get('id')
+    print(id)
+    delete_val = Roles.objects.get(id=id)
     delete_val.delete()
     return render(request,'Modified_files/edit.html')
 
@@ -92,6 +127,12 @@ def delete_hackthons(request):
     id = request.GET.get('id')
     delete_val = hackthons.objects.get(id=id)
     delete_val.delete()
+    return render(request,'Modified_files/edit.html')
+
+def add_resume(request):
+    img = request.GET.get('resume')
+    save_val = resume(img=img,last_date=date.today())
+    save_val.save()
     return render(request,'Modified_files/edit.html')
 
 
@@ -126,6 +167,15 @@ def save_certificate(request):
     img = request.GET['img']
     date = request.GET['date']
     store_val = certificate(img=img,topic=title,date_place=date)
+    store_val.save()
+    return render(request,'Modified_files/blog.html')
+
+def save_roles(request):
+    company = request.GET['title']
+    img = request.GET['img']
+    discrption = request.GET['dis']
+    link = request.GET['link']
+    store_val = Roles(img=img,company=company,discrption=discrption,link=link)
     store_val.save()
     return render(request,'Modified_files/blog.html')
 

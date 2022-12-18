@@ -1,0 +1,80 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<style>
+    .responsive {
+        border-radius: 23px;
+        box-shadow: 6px 3px 20px 0px pink;
+    }
+
+    @media screen and (max-width: 480px) {
+        .responsive {
+            width: 186%;
+            max-width: 419px;
+            height: 77%;
+            margin-left: -73px;
+        }
+    }
+</style>
+
+<body style="    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;">
+    <div style="
+    height: 5%;
+"></div>
+    <div style="    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;">
+        <button type="submit" onclick="window.open('{{ resume }}')" class="button button-gradient button-pink mr-3" data-ripple-light="true" >View Document</button>
+        <button type="submit" class="button button-gradient button-pink mr-3" data-ripple-light="true" ><a style="    color: #ffffff;" href="{{ resume }}" download >Download</a></button>
+    </div>
+    <!--Follow link for animation in action https://play.tailwindcss.com/IpRdROqEoQ -->
+    <div class="bg-gray-50 min-h-screen flex items-center justify-center px-16">
+        <div class="relative w-full max-w-lg">
+            <div
+                class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob ">
+            </div>
+            <div
+                class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute -bottom-32 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
+            </div>
+
+            <div class="m-8 relative space-y-4">
+                <div>
+                    <img src="{{ resume }}" alt="Nature" class="responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <ul class="flex" style="    z-index: 1;">
+        <li class="mx-1 px-3 py-2 bg-gray-200 text-gray-500 rounded-lg">
+            <a class="flex items-center font-bold" href="/">
+                <span class="mx-1">Home</span>
+            </a>
+        </li>
+        <li class="mx-1 px-3 py-2 bg-gray-200 text-gray-700 hover:bg-gray-700 hover:text-gray-200 rounded-lg">
+            <a class="font-bold" href="blog">Project</a>
+        </li>
+        <li class="mx-1 px-3 py-2 bg-gray-200 text-gray-700 hover:bg-gray-700 hover:text-gray-200 rounded-lg">
+            <a class="flex items-center font-bold" href="about">
+                <span class="mx-1">About</span>
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>
