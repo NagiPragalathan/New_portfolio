@@ -23,7 +23,7 @@ urlpatterns = [
     path('home',views.home),
     path('about',views.about),
     path('blog',views.blog),
-    path('edit',views.edit),
+    path('edit',views.edit,name='edit'),
     path('resume',views.resumes),
 
 
@@ -41,6 +41,9 @@ urlpatterns = [
     path('del_res',views.delete_res),
     path('save_role',views.save_roles),
     path('delete_role',views.delete_role),
+    path('check_pass',views.check_pass),
+    path('login',views.login_to_edit),
+
 
 
 ]

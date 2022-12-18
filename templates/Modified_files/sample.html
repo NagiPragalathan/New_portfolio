@@ -43,16 +43,19 @@
         <div class="collapse navbar-collapse" id="navbar-nav-header">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href=" {% static '/' %} ">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href=" about ">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=" {% static 'blog' %} ">Blog</a>
+                    <a class="nav-link" href="blog">Project</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=" {% static 'contact' %} ">Contact</a>
+                    <a class="nav-link" href="resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login">Edit_portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a id="side-search-open" class="nav-link" href="#">
@@ -70,7 +73,7 @@
 </nav>
 
 <div id="side-nav" class="sidenav">
-	<a href=" {% static 'javascript:void(0)' %} " id="side-nav-close">&times;</a>
+	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
 	
 	<div class="sidenav-content">
 		<p>
@@ -147,7 +150,7 @@
                                 </div>
                                 <h4>instagram</h4>
                                 <p>Here is the link to my Instagram page. If you have any tech-related queries, you can contact me there or via LinkedIn or instagram. I recently updated several posts about coding tutorials.</p>
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">GO TO >></button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit"><a style="color:aliceblue" href="https://instagram.com/mr_lazy_05?igshid=YmMyMTA2M2Y=">GO TO >></a></button>
                                 
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
@@ -156,7 +159,7 @@
                                 </div>
                                 <h4>facebook</h4>
                                 <p>Although I dont frequently use Facebook, you may still interact with me there by visiting my Facebook profile.</p>
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">GO TO >></button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit"><a style="color:aliceblue" href="https://www.facebook.com/profile.php?id=100081414617956">GO TO >></a></button>
                                 
                             </div>
                         </div>
@@ -169,7 +172,7 @@
                                 </div>
                                 <h4>youtube</h4>
                                 <p>Here is a link to my YouTube account, where you may access videos with helpful information on coding and technology.</p>
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">GO TO >></button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit"><a style="color:aliceblue" href="https://youtube.com/channel/UCwqqgoHCYOo2n9bERHQMK7A">GO TO >></a></button>
                                 
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
@@ -178,7 +181,7 @@
                                 </div>
                                 <h4>linkedin</h4>
                                 <p>If you have any questions or want to communicate, you may reach me through linked in. This is my linked in profile. I have some connections there. Visit LinkedIn to learn more about me. I was listed here along with my accomplishments, vacations, hackathon, and certifications.</p>
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">GO TO >></button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit"><a style="color:aliceblue" href="https://www.linkedin.com/in/nagi-pragalathan-n-a03a55230">GO TO >></a></button>
                                 
                             </div>
                         </div>
@@ -191,7 +194,7 @@
                                 </div>
                                 <h4>telegram</h4>
                                 <p>If you have any questions or would want to communicate, you may use this link to reach me on Telegram. Im accessible at all times for texts, and Im delighted to chat about any significant files we may exchange here.</p>
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">GO TO >></button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit"><a style="color:aliceblue" href="https://t.me/nagipragalathan">GO TO >></a></button>
                                 
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
@@ -200,7 +203,7 @@
                                 </div>
                                 <h4>github</h4>
                                 <p>There is a link to my github page where you can view my projects, team work, and modules. Ive completed both team-based and solo projects. Im an open source contributor as well, and I recently created two Python modules.</p>
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">GO TO >></button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit"><a style="color:aliceblue" href="https://github.com/NagiPragalathan">GO TO >></a></button>
                             
                             </div>
                         </div>
@@ -223,7 +226,7 @@
                         <div class="col-md-4 offset-md-2 col-sm-6" data-aos="fade-right">
                             <h4 class="mb-4">my work are listed below:</h4>
                             <p>everything has been moved to github, where Ive created two open-source contributed modules in Python, full-stack projects, team projects, and some really fantastic projects. Learn more about my knowledge and experience by clicking the button.</p>
-                            <button type="button" class="btn btn-outline-primary">Projects</button>
+                            <button type="button" onclick="window.location.replace('blog')" class="btn btn-outline-primary">Projects</button>
                         </div><!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
 
                         <div class="col-md-4 offset-md-right-2 col-sm-6" data-aos="flip-right">
@@ -260,7 +263,7 @@
                                 <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">CSS3 90%</div>
                             </div>
                             <br>
-                            <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">know more...</button>
+                            <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit" onclick="window.location.replace('about')">know more...</button>
                             
                         </div><!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
 
@@ -662,7 +665,7 @@
                 <div class="col-md-12 text-center">
                     <h2 class="mb-2">Thank you for spending your time with me *_* </h2>
                     <p>Enjoy your day. Remember to follow me on Instagram, connect with me on LinkedIn, subscribe to my YouTube channel, and consider hiring me for your company. </p>
-                    <a class="btn btn-outline-primary btn-lg" href=" {% static '#features' %} ">Do it fast</a>
+                    <a class="btn btn-outline-primary btn-lg" href="https://youtube.com/channel/UCwqqgoHCYOo2n9bERHQMK7A">Do it fast</a>
                 </div>
             </div>
         </div>

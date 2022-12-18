@@ -1,9 +1,32 @@
 from django.shortcuts import render, redirect
 import requests
 from .models import projects, skill, atchviements, certificate, hackthons, resume, Roles
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 from datetime import date
+
+# def usr(request):
+#     user = User.objects.create_user('nagipragalathan', 'nagipragalathan@gmail.com', '7401268091')
+#     user.save()
+#     print("user saved")
+#     return render(request,'Modified_files/sample.html')
+
+def check_pass(request):
+    username = request.POST.get('mail')
+    password = request.POST.get('pass')
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        login(request,user)
+        return redirect('edit')
+    else:
+        return render(request,'Modified_files/login.html')
+
+def login_to_edit(request):
+    return render(request,'Modified_files/login.html')
 
 def home(request):
     return render(request,'Modified_files/sample.html')
@@ -72,6 +95,7 @@ def about(request):
 
     return render(request,'Modified_files/abt.html',{"repository":repository,"skill_r":skill_r,"skill_l":skill_l,"act" : atc,"certificate":certificates,"hackathon":hackathon,"hack_detials":hack_detials,'roles_pos':roles_pos})
 
+@login_required(redirect_field_name='login')
 def edit(request):
     full_data = projects.objects.all()
     skills = skill.objects.all()
