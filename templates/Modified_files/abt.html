@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- External CSS -->
-    <link href=
-    "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-              rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href=" {% static 'vendor/bootstrap/bootstrap.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'vendor/select2/select2.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'vendor/owlcarousel/owl.carousel.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'vendor/lightcase/lightcase.css' %} ">
-     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
@@ -24,16 +23,18 @@
     <!-- CSS -->
     <link rel="stylesheet" href=" {% static 'css/style.min.css ' %} ">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 </head>
+
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
-	<div id="side-nav" class="sidenav">
+    <div id="side-nav" class="sidenav">
         <a href="javascript:void(0)" id="side-nav-close">&times;</a>
-        
+
         <div class="sidenav-content">
             <p>
                 Mail : nagipragalathan@gmail.com
@@ -43,29 +44,33 @@
             </p>
             <p>LinkedIn : nagipragalathan</p>
         </div>
-    </div>	<div id="side-search" class="sidenav">
+    </div>
+    <div id="side-search" class="sidenav">
         <a href="javascript:void(0)" id="side-search-close">&times;</a>
         <div class="sidenav-content">
             <form action="">
-    
+
                 <div class="input-group md-form form-sm form-2 pl-0">
-                  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-                  <div class="input-group-append">
-                    <button class="input-group-text red lighten-3" id="basic-text1">
-                        <span class="lnr lnr-magnifier"></span>
-                    </button>
-                  </div>
+                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="input-group-text red lighten-3" id="basic-text1">
+                            <span class="lnr lnr-magnifier"></span>
+                        </button>
+                    </div>
                 </div>
-    
+
             </form>
         </div>
-        
-    </div>	<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
+
+    </div>
+    <nav id="header-navbar" class="navbar navbar-expand-lg py-4">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center text-white" href=" {% static '/' %} ">
                 <h3 class="font-weight-bolder mb-0">nagi's portfolio</h3>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header"
+                aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="lnr lnr-menu"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-nav-header">
@@ -90,7 +95,7 @@
                             <span class="lnr lnr-magnifier"></span>
                         </a>
                     </li>
-                     <li class="nav-item only-desktop">
+                    <li class="nav-item only-desktop">
                         <a class="nav-link" id="side-nav-open" href="#">
                             <span class="lnr lnr-menu"></span>
                         </a>
@@ -99,10 +104,10 @@
             </div>
         </div>
     </nav>
-    
+
     <div id="side-nav" class="sidenav">
         <a href="javascript:void(0)" id="side-nav-close">&times;</a>
-        
+
         <div class="sidenav-content">
             <p>
                 Kuncen WB1, Wirobrajan 10010, DIY
@@ -112,80 +117,94 @@
             </p>
             <p>info@yourdomain.com</p>
         </div>
-    </div><div id="side-search" class="sidenav">
+    </div>
+    <div id="side-search" class="sidenav">
         <a href="javascript:void(0)" id="side-search-close">&times;</a>
         <div class="sidenav-content">
             <form action="">
-    
+
                 <div class="input-group md-form form-sm form-2 pl-0">
-                  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-                  <div class="input-group-append">
-                    <button class="input-group-text red lighten-3" id="basic-text1">
-                        <span class="lnr lnr-magnifier"></span>
-                    </button>
-                  </div>
+                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="input-group-text red lighten-3" id="basic-text1">
+                            <span class="lnr lnr-magnifier"></span>
+                        </button>
+                    </div>
                 </div>
-    
+
             </form>
         </div>
-        
-    </div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-position-y:5px;opacity:0.9;">
-      <div class="container text-center">
-        <h1 class="display-2 mb-4">About</h1>
-      </div>
+
+    </div>
+    <div class="jumbotron jumbotron-single d-flex align-items-center" style="background-position-y:5px;opacity:0.9;">
+        <div class="container text-center">
+            <h1 class="display-2 mb-4">About</h1>
+        </div>
     </div>
     <div style="display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center; background: linear-gradient(to right, #6c68b4, #f945d7);">
         <div class="rounded-3xl overflow-hidden shadow-xl max-w-xs my-3 bg-blue-500" style="background-color: #0fbab2;">
-            <img src="https://imgs.search.brave.com/vjJ7yKhiZbPmDzffc92VQuA4sHoYRNQ8WMAjoQq2os8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI3NjA3/MzEuanBn" class="w-full" />
-        <div class="flex justify-center -mt-8">
-            <img src="https://avatars.githubusercontent.com/u/83810241?s=400&u=7f4c8a15c7befdf28c7544f2fe3a6c677b97f6f6&v=4" class="rounded-full border-solid border-white border-2 -mt-3" style="width: 125px;">		
-        </div>
-        <div class="text-center px-3 pb-6 pt-2">
-            <h3 class="text-white text-sm bold font-sans">Nagi Pragalathan N</h3>
-            <p class="mt-2 font-sans font-light text-white">Open scorce conributor | web3 Developer</p>
-        </div>
+            <img src="https://imgs.search.brave.com/vjJ7yKhiZbPmDzffc92VQuA4sHoYRNQ8WMAjoQq2os8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI3NjA3/MzEuanBn"
+                class="w-full" />
+            <div class="flex justify-center -mt-8">
+                <img src="https://avatars.githubusercontent.com/u/83810241?s=400&u=7f4c8a15c7befdf28c7544f2fe3a6c677b97f6f6&v=4"
+                    class="rounded-full border-solid border-white border-2 -mt-3" style="width: 125px;">
+            </div>
+            <div class="text-center px-3 pb-6 pt-2">
+                <h3 class="text-white text-sm bold font-sans">Nagi Pragalathan N</h3>
+                <p class="mt-2 font-sans font-light text-white">Open scorce conributor | web3 Developer</p>
+            </div>
             <div class="flex justify-center pb-3 text-white">
-            <div class="text-center mr-3 border-r pr-3">
-            <h2>{{ hack_detials.0 }}</h2>
-            <span>Hackathons</span>
+                <div class="text-center mr-3 border-r pr-3">
+                    <h2>{{ hack_detials.0 }}</h2>
+                    <span>Hackathons</span>
+                </div>
+                <div class="text-center">
+                    <h2>{{ hack_detials.1 }}</h2>
+                    <span>Wining Count</span>
+                </div>
             </div>
-            <div class="text-center">
-            <h2>{{ hack_detials.1 }}</h2>
-            <span>Wining Count</span>
-            </div>
-            </div>
-    </div>
+        </div>
     </div>
     <section id="who-we-are" class="bg-white">
         <div class="container">
             <div class="section-content">
                 <div class="title-wrap" data-aos="fade-up">
                     <h2 class="section-title">This page helps you <br>better grasp<b> who I am.</b></h2>
-                    <p class="section-sub-title">I am knowledgeable in a variety of programming languages, including Python, HTML, CSS, C#, Java, and Js. To learn more about my abilities and knowledge, click the more button.</p>
+                    <p class="section-sub-title">I am knowledgeable in a variety of programming languages, including
+                        Python, HTML, CSS, C#, Java, and Js. To learn more about my abilities and knowledge, click the
+                        more button.</p>
                 </div>
-                
+
                 <div class="row text-center">
                     <div class="col-md-4 col-sm-6" data-aos="fade-up">
-                        <img class="rounded-circle" src=" {% static 'img/icons/animat-checkmark.gif' %} " alt="Generic placeholder image" width="140" height="140">
+                        <img class="rounded-circle" src=" {% static 'img/icons/animat-checkmark.gif' %} "
+                            alt="Generic placeholder image" width="140" height="140">
                         <h5 class="mb-4">my work are listed below:</h5>
-                        <p>everything has been moved to github, where Ive created two open-source contributed modules in Python, full-stack projects, team projects, and some really fantastic projects. Learn more about my knowledge and experience by clicking the button.</p>
+                        <p>everything has been moved to github, where Ive created two open-source contributed modules in
+                            Python, full-stack projects, team projects, and some really fantastic projects. Learn more
+                            about my knowledge and experience by clicking the button.</p>
                         <p><a class="btn btn-link" href="#" role="button">View details</a></p>
                     </div>
                     <!-- /.col-md-4 col-sm-6  -->
                     <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                        <img class="rounded-circle" src=" {% static 'img/icons/animat-customize.gif' %} " alt="Generic placeholder image" width="140" height="140">
+                        <img class="rounded-circle" src=" {% static 'img/icons/animat-customize.gif' %} "
+                            alt="Generic placeholder image" width="140" height="140">
                         <h5 class="mb-4">These are a few of my skills:</h5>
-                        <p>I am knowledgeable in a variety of programming languages, including Python, HTML, CSS, C#, Java, and Js. To learn more about my abilities and knowledge, click the more button.</p>
+                        <p>I am knowledgeable in a variety of programming languages, including Python, HTML, CSS, C#,
+                            Java, and Js. To learn more about my abilities and knowledge, click the more button.</p>
                         <p><a class="btn btn-link" href="#" role="button">View details</a></p>
                     </div>
                     <!-- /.col-md-4 col-sm-6  -->
                     <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                        <img class="rounded-circle" src=" {% static 'img/icons/animat-responsive.gif' %} " alt="Generic placeholder image" width="140" height="140">
+                        <img class="rounded-circle" src=" {% static 'img/icons/animat-responsive.gif' %} "
+                            alt="Generic placeholder image" width="140" height="140">
                         <h5 class="mb-4">Contact me through the platforms listed below:</h5>
-                        <p>If you have any questions or want to communicate, you may reach me through these platforms.</p>
+                        <p>If you have any questions or want to communicate, you may reach me through these platforms.
+                        </p>
                         <p><a class="btn btn-link" href="#" role="button">View details</a></p>
                     </div>
                     <!-- /.col-md-4 col-sm-6  -->
@@ -193,27 +212,31 @@
                 <!-- /.row -->
             </div>
         </div>
-    </section>	<section id="skills" class="bg-white">
+    </section>
+    <section id="skills" class="bg-white">
         <div style="display: flex;
         flex-direction: column;
         align-items: center;
         align-content: center;
         justify-content: center;
         font-weight: bold;
-        flex-wrap: nowrap;"><h1>Skills</h1></div>
+        flex-wrap: nowrap;">
+            <h1>Skills</h1>
+        </div>
         <div class="container">
             <div class="section-content pt-0">
                 <div class="row">
                     <div class="col-md-6" data-aos="fade-right">
                         <!-- Skill Item -->
-                           {% for key, value in skill_r.items %}
+                        {% for key, value in skill_r.items %}
                         <div class="skill-item">
                             <div class="d-flex justify-content-between">
-                                 <p>{{ key }}</p>
+                                <p>{{ key }}</p>
                                 <p class="text-muted">{{ value }}</p>
                             </div>
                             <div class="progress" data-percent="{{ value }}">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 0"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100" style="width: 0"></div>
                             </div>
                         </div>
                         {% endfor %}
@@ -221,14 +244,15 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-left">
                         <!-- Skill Item -->
-                           {% for key, value in skill_l.items %}
+                        {% for key, value in skill_l.items %}
                         <div class="skill-item">
                             <div class="d-flex justify-content-between">
-                                 <p>{{ key }}</p>
+                                <p>{{ key }}</p>
                                 <p class="text-muted">{{ value }}</p>
                             </div>
                             <div class="progress" data-percent="{{ value }}">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 0"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                    aria-valuemax="100" style="width: 0"></div>
                             </div>
                         </div>
                         {% endfor %}
@@ -237,7 +261,7 @@
                 </div>
             </div>
         </div>
-    </section>	<!-- Features Section-->
+    </section> <!-- Features Section-->
 
     <div style="display: flex;
     flex-direction: column;
@@ -246,8 +270,9 @@
     justify-content: center;
     font-weight: bold;
     flex-wrap: nowrap;">
-    
-    <h1>Roles</h1></div>
+
+        <h1>Roles</h1>
+    </div>
     <div style="    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -255,18 +280,26 @@
     align-items: center;
     align-content: center;">
         {% for i in roles_pos %}
-        <div style="    margin-top: 30px;" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div style="    margin-top: 30px;"
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <img class="rounded-t-lg" src="{{ i.img }}" alt="" />
             </a>
             <div class="p-5">
                 <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ i.company }}</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ i.company }}
+                    </h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ i.discrption }}</p>
-                <a href="{{ i.link }}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <a href="{{ i.link }}"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Read more
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -275,7 +308,7 @@
     </section>
 
 
-                                            <!-- Atchviements -->
+    <!-- Atchviements -->
     <div style="display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,8 +316,9 @@
     justify-content: center;
     font-weight: bold;
     flex-wrap: nowrap;">
-    
-    <h1>Achievements</h1></div>
+
+        <h1>Achievements</h1>
+    </div>
     <section style="    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -292,42 +326,38 @@
     justify-content: center;
     align-items: center;">
         {% for i in act %}
-            <div style="    max-width: 330px;" class="hover:animate-spin relative max-w-md mx-auto xl:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
-                <div class="card">
-                    <div class="card-header mx-4 -mt-6">
-                        <a
-                        href="https://github.com/NagiPragalathan?tab=repositories"
-                        blur-shadow-image="true"
-                        >
-                        <img
-                            class="w-auto rounded-lg"
-                            src="{{ i.0 }}"
-                            alt="tailwind-card-image"/>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <a href="#">
+        <div style="    max-width: 330px;"
+            class="hover:animate-spin relative max-w-md mx-auto xl:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
+            <div class="card">
+                <div class="card-header mx-4 -mt-6">
+                    <a href="https://github.com/NagiPragalathan?tab=repositories" blur-shadow-image="true">
+                        <img class="w-auto rounded-lg" src="{{ i.0 }}" alt="tailwind-card-image" />
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="#">
                         <h4 class="font-semibold">{{ i.1 }}</h4>
-                        </a>
-                        <p class="opcacity-60 mb-4">
+                    </a>
+                    <p class="opcacity-60 mb-4">
                         {{ i.2 }}
-                        </p>
-                        <button class="button button-pink" data-ripple-light="true">
+                    </p>
+                    <button class="button button-pink" data-ripple-light="true">
                         Read More
-                        </button>
-                    </div>
-                    </div>
+                    </button>
                 </div>
             </div>
+        </div>
+        </div>
         {% endfor %}
     </section>
 
-                                        <!-- certifications -->
+    <!-- certifications -->
 
     <h1 style="display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;">certifications</h1></div>
+    flex-direction: column;">certifications</h1>
+    </div>
     <section style="    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -335,82 +365,80 @@
     justify-content: center;
     align-items: center;">
         {% for i in certificate %}
-            <div style="    max-width: 330px;" class="hover:animate-spin relative max-w-md mx-auto xl:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
-                <div class="card">
-                    <div class="card-header mx-4 -mt-6">
-                        <a
-                        href="https://github.com/NagiPragalathan?tab=repositories"
-                        blur-shadow-image="true"
-                        >
-                        <img
-                            class="w-auto rounded-lg"
-                            src="{{ i.0 }}"
-                            alt="tailwind-card-image"/>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <a href="#">
+        <div style="    max-width: 330px;"
+            class="hover:animate-spin relative max-w-md mx-auto xl:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
+            <div class="card">
+                <div class="card-header mx-4 -mt-6">
+                    <a href="https://github.com/NagiPragalathan?tab=repositories" blur-shadow-image="true">
+                        <img class="w-auto rounded-lg" src="{{ i.0 }}" alt="tailwind-card-image" />
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="#">
                         <h4 class="font-semibold">{{ i.1 }}</h4>
-                        </a>
-                        <p class="opcacity-60 mb-4">
+                    </a>
+                    <p class="opcacity-60 mb-4">
                         {{ i.2 }}
-                        </p>
-                        <button class="button button-pink" data-ripple-light="true">
+                    </p>
+                    <button class="button button-pink" data-ripple-light="true">
                         Read More
-                        </button>
-                    </div>
-                    </div>
+                    </button>
                 </div>
             </div>
+        </div>
+        </div>
         {% endfor %}
     </section>
     <h1 style="display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;">Hackathons</h1></div>
+    flex-direction: column;">Hackathons</h1>
+    </div>
     <section>
         <div class="h-screen flex flex-col gap-4 items-center justify-center bg-white">
             {% for datas in hackathon %}
             <!-- Card 1 -->
             <a href="#" class="w-[30rem] border-2 border-b-4 border-gray-200 rounded-xl hover:bg-gray-50">
-        
-            <!-- Badge -->
-            <p class="bg-sky-500 w-fit px-4 py-1 text-sm font-bold text-white rounded-tl-lg rounded-br-xl"> FEATURED </p>
-        
-            <div class="grid grid-cols-6 p-5 gap-y-2">
-        
-                <!-- Profile Picture -->
-                <div>
-                <img src="{{ datas.0 }}" class="max-w-16 max-h-16 rounded-full" />
+
+                <!-- Badge -->
+                <p class="bg-sky-500 w-fit px-4 py-1 text-sm font-bold text-white rounded-tl-lg rounded-br-xl"> FEATURED
+                </p>
+
+                <div class="grid grid-cols-6 p-5 gap-y-2">
+
+                    <!-- Profile Picture -->
+                    <div>
+                        <img src="{{ datas.0 }}" class="max-w-16 max-h-16 rounded-full" />
+                    </div>
+
+                    <!-- Description -->
+                    <div class="col-span-5 md:col-span-4 ml-4">
+
+                        <p class="text-sky-500 font-bold text-xs"> {{ datas.1 }} </p>
+
+                        <p class="text-gray-600 font-bold"> {{ datas.2 }} </p>
+
+                        <p class="text-gray-400">{{ datas.3 }}</p>
+
+                        <p class="text-gray-400"> {{ datas.4 }} </p>
+
+                    </div>
+
+                    <!-- Price -->
+                    <div class="flex col-start-2 ml-4 md:col-start-auto md:ml-0 md:justify-end">
+                        <p class="rounded-lg text-sky-500 font-bold bg-sky-100  py-1 px-3 text-sm w-fit h-fit">{{
+                            datas.5 }}</p>
+                    </div>
+
                 </div>
-        
-                <!-- Description -->
-                <div class="col-span-5 md:col-span-4 ml-4">
-        
-                <p class="text-sky-500 font-bold text-xs"> {{ datas.1 }} </p>
-        
-                <p class="text-gray-600 font-bold"> {{ datas.2 }} </p>
-        
-                <p class="text-gray-400">{{ datas.3 }}</p>
-        
-                <p class="text-gray-400"> {{ datas.4 }} </p>
-        
-                </div>
-        
-                <!-- Price -->
-                <div class="flex col-start-2 ml-4 md:col-start-auto md:ml-0 md:justify-end">
-                <p class="rounded-lg text-sky-500 font-bold bg-sky-100  py-1 px-3 text-sm w-fit h-fit">{{ datas.5 }}</p>
-                </div>
-        
-            </div>
-        
+
             </a>
             {% endfor %}
 
         </div>
     </section>
 
-                                            <!-- github -->
+    <!-- github -->
 
     <div style="display: flex;
     flex-direction: column;
@@ -418,7 +446,9 @@
     align-content: center;
     justify-content: center;
     font-weight: bold;
-    flex-wrap: nowrap;"><h1>Github</h1></div>
+    flex-wrap: nowrap;">
+        <h1>Github</h1>
+    </div>
     <div style="display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -426,9 +456,21 @@
     align-items: center;
     padding: 16px;
     justify-content: center;">
-        <img align="center" src="https://camo.githubusercontent.com/db77543a597c144693588a8576ef0b24afdc3de52f082269bbbda702b1ca1cff/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6e61676970726167616c617468616e2673686f775f69636f6e733d74727565266c6f63616c653d656e" alt="nagipragalathan" data-canonical-src="https://github-readme-stats.vercel.app/api?username=nagipragalathan&amp;show_icons=true&amp;locale=en" style="max-width: 100%;">
-        <img align="center" src="https://camo.githubusercontent.com/30248e0c6ca2280d8e47d5641ff72d598a5c2b68ac140c12569e4a1912552eb3/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d6e61676970726167616c617468616e26" alt="nagipragalathan" data-canonical-src="https://github-readme-streak-stats.herokuapp.com/?user=nagipragalathan&amp;" style="max-width: 100%;">
-        <img align="left" src="https://camo.githubusercontent.com/ec95c7957ec562a422de7ebc3d77fa8a1a029468843c10bc85f4d4df1eb91a15/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d6e61676970726167616c617468616e2673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374" alt="nagipragalathan" data-canonical-src="https://github-readme-stats.vercel.app/api/top-langs?username=nagipragalathan&amp;show_icons=true&amp;locale=en&amp;layout=compact" style="max-width: 100%;">
+        <img align="center"
+            src="https://camo.githubusercontent.com/db77543a597c144693588a8576ef0b24afdc3de52f082269bbbda702b1ca1cff/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6e61676970726167616c617468616e2673686f775f69636f6e733d74727565266c6f63616c653d656e"
+            alt="nagipragalathan"
+            data-canonical-src="https://github-readme-stats.vercel.app/api?username=nagipragalathan&amp;show_icons=true&amp;locale=en"
+            style="max-width: 100%;">
+        <img align="center"
+            src="https://camo.githubusercontent.com/30248e0c6ca2280d8e47d5641ff72d598a5c2b68ac140c12569e4a1912552eb3/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d6e61676970726167616c617468616e26"
+            alt="nagipragalathan"
+            data-canonical-src="https://github-readme-streak-stats.herokuapp.com/?user=nagipragalathan&amp;"
+            style="max-width: 100%;">
+        <img align="left"
+            src="https://camo.githubusercontent.com/ec95c7957ec562a422de7ebc3d77fa8a1a029468843c10bc85f4d4df1eb91a15/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d6e61676970726167616c617468616e2673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374"
+            alt="nagipragalathan"
+            data-canonical-src="https://github-readme-stats.vercel.app/api/top-langs?username=nagipragalathan&amp;show_icons=true&amp;locale=en&amp;layout=compact"
+            style="max-width: 100%;">
     </div>
 
     <div style="display: flex;
@@ -436,48 +478,54 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    width: 100%;">    
-        <div style="max-width: 100%;" class="w-full max-w-md p-4 bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <div class="flex items-center justify-between mb-4">
-            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest contributions</h5>
-            <a href="https://github.com/NagiPragalathan?tab=repositories" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
-                View all
-            </a>
-    </div>
-    <div class="flow-root">
-            <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                {% for key, value in repository.items %}
-                <li class="py-3 sm:py-4">
-                    <div class="flex items-center space-x-4">
-                        <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://avatars.githubusercontent.com/u/83810241?v=4" alt="Neil image">
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                {{ key }}
-                            </p>
-                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                <a href="https://github.com/NagiPragalathan/{{ key }}">https://github.com/NagiPragalathan/{{ key }}</a>
-                            </p>
-                        </div>
-                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+    width: 100%;">
+        <div style="max-width: 100%;"
+            class="w-full max-w-md p-4 bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex items-center justify-between mb-4">
+                <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest contributions</h5>
+                <a href="https://github.com/NagiPragalathan?tab=repositories"
+                    class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                    View all
+                </a>
+            </div>
+            <div class="flow-root">
+                <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                    {% for key, value in repository.items %}
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full"
+                                    src="https://avatars.githubusercontent.com/u/83810241?v=4" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    {{ key }}
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    <a href="https://github.com/NagiPragalathan/{{ key }}">https://github.com/NagiPragalathan/{{
+                                        key }}</a>
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                                 {{ value }}
+                            </div>
                         </div>
-                    </div>
-                </li>
-                {% endfor %}
+                    </li>
+                    {% endfor %}
 
+            </div>
+        </div>
     </div>
-    </div>
-</div>
     <section id="cta" class="bg-fixed overlay" style="background-image: url( {% static 'img/bg.jpg' %} );">
         <div class="container">
             <div class="section-content" data-aos="fade-up">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2 class="mb-2">Thank you for spending your time with me *_* </h2>
-                        <p>Enjoy your day. Remember to follow me on Instagram, connect with me on LinkedIn, subscribe to my YouTube channel, and consider hiring me for your company. </p>
-                        <a class="btn btn-outline-primary btn-lg" href="https://youtube.com/channel/UCwqqgoHCYOo2n9bERHQMK7A">Do it fast</a>
+                        <p>Enjoy your day. Remember to follow me on Instagram, connect with me on LinkedIn, subscribe to
+                            my YouTube channel, and consider hiring me for your company. </p>
+                        <a class="btn btn-outline-primary btn-lg"
+                            href="https://youtube.com/channel/UCwqqgoHCYOo2n9bERHQMK7A">Do it fast</a>
                     </div>
                 </div>
             </div>
@@ -486,10 +534,10 @@
     <!-- End of Features Section--></div>
     <footer class="mastfoot my-3">
         <div class="inner container">
-             <div class="row">
-                 <div class="col-lg-4 col-md-12 d-flex align-items-center">
-                     
-                 </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 d-flex align-items-center">
+
+                </div>
                 <div class="col-lg-4 col-md-12">
                     <nav class="nav nav-mastfoot justify-content-center">
                         <a class="nav-link" href="#">
@@ -509,10 +557,10 @@
                         </a>
                     </nav>
                 </div>
-                
+
             </div>
         </div>
-    </footer>	<!-- External JS -->
+    </footer> <!-- External JS -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <script src=" {% static 'vendor/bootstrap/popper.min.js' %} "></script>
     <script src=" {% static 'vendor/bootstrap/bootstrap.min.js' %} "></script>
@@ -523,8 +571,9 @@
     <script src=" {% static 'vendor/lightcase/lightcase.js' %} "></script>
     <script src=" {% static 'vendor/waypoints/waypoint.min.js' %} "></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	 
-	<!-- Main JS -->
-	<script src=" {% static 'js/app.min.js' %} "></script>
+
+    <!-- Main JS -->
+    <script src=" {% static 'js/app.min.js' %} "></script>
 </body>
+
 </html>

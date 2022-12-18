@@ -1,5 +1,6 @@
 <html lang="en">
 {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,8 +37,10 @@ align-items: center;">
     flex-direction: row;
     justify-content: space-between;
     align-items: center;">
-        <button type="submit" onclick="window.open('{{ resume }}')" class="button button-gradient button-pink mr-3" data-ripple-light="true" >View Document</button>
-        <button type="submit" class="button button-gradient button-pink mr-3" data-ripple-light="true" ><a style="    color: #ffffff;" href="{{ resume }}" download >Download</a></button>
+        <button type="submit" onclick="window.open('{{ resume }}')" class="button button-gradient button-pink mr-3"
+            data-ripple-light="true">View Document</button>
+        <button type="submit" class="button button-gradient button-pink mr-3" data-ripple-light="true"><a
+                style="    color: #ffffff;" href="{{ resume }}" download>Download</a></button>
     </div>
     <!--Follow link for animation in action https://play.tailwindcss.com/IpRdROqEoQ -->
     <div class="bg-gray-50 min-h-screen flex items-center justify-center px-16">
