@@ -13,7 +13,7 @@ from datetime import date
 #     user = User.objects.create_user('nagipragalathan', 'nagipragalathan@gmail.com', '7401268091')
 #     user.save()
 #     print("user saved")
-#     return render(request,'Modified_files/sample.html')
+#     return render(request,'sample.html')
 
 
 def check_pass(request):
@@ -24,28 +24,28 @@ def check_pass(request):
         login(request, user)
         return redirect('edit')
     else:
-        return render(request, 'Modified_files/login.html')
+        return render(request, 'login.html')
 
 
 def login_to_edit(request):
-    return render(request, 'Modified_files/login.html')
+    return render(request, 'login.html')
 
 
 def home(request):
-    return render(request, 'Modified_files/sample.html')
+    return render(request, 'sample.html')
 
 
 def resumes(request):
     res = [i.img for i in resume.objects.all()]
     try:
-        return render(request, 'Modified_files/resume.html', {'resume': res[-1]})
+        return render(request, 'resume.html', {'resume': res[-1]})
     except:
-        return render(request, 'Modified_files/resume.html', {'resume': res})
+        return render(request, 'resume.html', {'resume': res})
 
 
 def blog(request):
     project = [["https://imgs.search.brave.com/DaF2J-lw_q55hmQePzAqxD4R1HTalI2o8xRKDtSofqY/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9oZHdh/bGxwYXBlcmltLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ny8wOC8yMi84Njkx/MC1hbmltZS1saWdo/dGhvdXNlLWZsb2F0/aW5nX2lzbGFuZC5q/cGc", "title", "date", "para"]]
-    return render(request, 'Modified_files/blog.html', {'project': project})
+    return render(request, 'blog.html', {'project': project})
 
 
 def about(request):
@@ -99,7 +99,7 @@ def about(request):
     hack_detials = [hack_count, winings]
     roles_pos = Roles.objects.all()
 
-    return render(request, 'Modified_files/abt.html', {"repository": repository, "skill_r": skill_r, "skill_l": skill_l, "act": atc, "certificate": certificates, "hackathon": hackathon, "hack_detials": hack_detials, 'roles_pos': roles_pos})
+    return render(request, 'abt.html', {"repository": repository, "skill_r": skill_r, "skill_l": skill_l, "act": atc, "certificate": certificates, "hackathon": hackathon, "hack_detials": hack_detials, 'roles_pos': roles_pos})
 
 
 @login_required(redirect_field_name='login')
@@ -113,28 +113,28 @@ def edit(request):
     roles_pos = Roles.objects.all()
     for i in Roles.objects.all():
         print(i.id)
-    return render(request, 'Modified_files/edit.html', {'data': full_data, 'skill': skills, 'atc': atc, 'cer': cer, 'hackathon': hackathon, 'res': res, 'roles_pos': roles_pos})
+    return render(request, 'edit.html', {'data': full_data, 'skill': skills, 'atc': atc, 'cer': cer, 'hackathon': hackathon, 'res': res, 'roles_pos': roles_pos})
 
 
 def del_skill(request):
     id = request.GET.get('id')
     delete_val = skill.objects.get(id=id)
     delete_val.delete()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def delete_prj(request):
     id = request.GET.get('id')
     delete_val = projects.objects.get(id=id)
     delete_val.delete()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def delete_atc(request):
     id = request.GET.get('id')
     delete_val = atchviements.objects.get(id=id)
     delete_val.delete()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def delete_res(request):
@@ -142,7 +142,7 @@ def delete_res(request):
     delete_val = resume.objects.get(id=id)
     print(delete_val)
     delete_val.delete()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def delete_cer(request):
@@ -150,7 +150,7 @@ def delete_cer(request):
     print(id)
     delete_val = certificate.objects.get(id=id)
     delete_val.delete()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def delete_role(request):
@@ -158,21 +158,21 @@ def delete_role(request):
     print(id)
     delete_val = Roles.objects.get(id=id)
     delete_val.delete()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def delete_hackthons(request):
     id = request.GET.get('id')
     delete_val = hackthons.objects.get(id=id)
     delete_val.delete()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def add_resume(request):
     img = request.GET.get('resume')
     save_val = resume(img=img, last_date=date.today())
     save_val.save()
-    return render(request, 'Modified_files/edit.html')
+    return render(request, 'edit.html')
 
 
 def save_skill(request):
@@ -181,7 +181,7 @@ def save_skill(request):
     print(Persentage, lang)
     store_val = skill(language=lang, persentage=Persentage)
     store_val.save()
-    return render(request, 'Modified_files/blog.html')
+    return render(request, 'blog.html')
 
 
 def save_atchviements(request):
@@ -190,7 +190,7 @@ def save_atchviements(request):
     date = request.GET['date']
     store_val = atchviements(img=img, topic=title, date_place=date)
     store_val.save()
-    return render(request, 'Modified_files/blog.html')
+    return render(request, 'blog.html')
 
 
 def save_project(request):
@@ -202,7 +202,7 @@ def save_project(request):
     store_val = projects(img=img, topic=title,
                          date_place=date, paragraph=detials)
     store_val.save()
-    return render(request, 'Modified_files/blog.html')
+    return render(request, 'blog.html')
 
 
 def save_certificate(request):
@@ -211,7 +211,7 @@ def save_certificate(request):
     date = request.GET['date']
     store_val = certificate(img=img, topic=title, date_place=date)
     store_val.save()
-    return render(request, 'Modified_files/blog.html')
+    return render(request, 'blog.html')
 
 
 def save_roles(request):
@@ -222,7 +222,7 @@ def save_roles(request):
     store_val = Roles(img=img, company=company,
                       discrption=discrption, link=link)
     store_val.save()
-    return render(request, 'Modified_files/blog.html')
+    return render(request, 'blog.html')
 
 
 def save_hackthons(request):
@@ -236,4 +236,4 @@ def save_hackthons(request):
     store_val = hackthons(img=img, topic=title, date_place=date,
                           sub_topic=sub_topic, team=team, result=result)
     store_val.save()
-    return render(request, 'Modified_files/blog.html')
+    return render(request, 'blog.html')
